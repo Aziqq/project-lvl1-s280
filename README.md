@@ -7,3 +7,15 @@
 ```sh
 $ make install
 ```
+
+### Run
+
+```sh
+$ make start
+```
+
+### Run even game
+
+```sh
+$ make even
+```
