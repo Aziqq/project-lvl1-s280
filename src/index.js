@@ -21,4 +21,5 @@ export const gameEven = (name, acc) => {
     console.log(`'${actualAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
     console.log(`Let's try again, ${name}!`);
   }
+  return null;
 };
