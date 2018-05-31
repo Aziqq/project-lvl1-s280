@@ -7,4 +7,4 @@ even:
 publish:
 	npm publish
 lint:
-	npm run eslint .src
+	npm run eslint .
