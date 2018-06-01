@@ -16,7 +16,6 @@ export default () => {
           return '*';
       }
     };
-
     const getResult = (a, b, operator) => {
       switch (operator) {
         case '+':
