@@ -7,14 +7,12 @@ const roundsCount = 10;
 export default () => {
   const task = () => {
     const getRandomOperators = () => {
-      switch (getRandomNum(1, 3)) {
-        case 1:
-          return '+';
-        case 2:
-          return '-';
-        default:
-          return '*';
+      if (getRandomNum(1, 3) === 1) {
+        return '+';
+      } else if (getRandomNum(1, 3) === 2) {
+        return '-';
       }
+      return '*';
     };
     const getResult = (a, b, operator) => {
       switch (operator) {
