@@ -5,25 +5,25 @@ const gameDescription = 'What is the result of the expression?';
 const roundsCount = 10;
 
 export default () => {
+  const getRandomOperators = () => {
+    if (getRandomNum(1, 3) === 1) {
+      return '+';
+    } else if (getRandomNum(1, 3) === 2) {
+      return '-';
+    }
+    return '*';
+  };
+  const getResult = (a, b, operator) => {
+    switch (operator) {
+      case '+':
+        return a + b;
+      case '-':
+        return a - b;
+      default:
+        return a * b;
+    }
+  };
   const task = () => {
-    const getRandomOperators = () => {
-      if (getRandomNum(1, 3) === 1) {
-        return '+';
-      } else if (getRandomNum(1, 3) === 2) {
-        return '-';
-      }
-      return '*';
-    };
-    const getResult = (a, b, operator) => {
-      switch (operator) {
-        case '+':
-          return a + b;
-        case '-':
-          return a - b;
-        default:
-          return a * b;
-      }
-    };
     const operator = getRandomOperators();
     const num1 = getRandomNum(1, 10);
     const num2 = getRandomNum(1, 10);
