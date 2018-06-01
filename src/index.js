@@ -6,20 +6,32 @@ export default () => {
   return userName;
 };
 
-export const gameEven = (name, acc) => {
-  if (acc === 0) {
-    return console.log(`Congratulations, ${name}!`);
-  }
-  const randomNum = Math.floor(100 * Math.random());
-  console.log(`Question: ${randomNum}`);
-  const actualAnswer = readlineSync.question('Your answer: ');
-  const correctAnswer = randomNum % 2 === 0 ? 'yes' : 'no';
-  if (actualAnswer === correctAnswer) {
-    console.log('Correct!');
-    gameEven(name, acc - 1);
-  } else {
-    console.log(`'${actualAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-    console.log(`Let's try again, ${name}!`);
-  }
-  return null;
+const isEven = num => num % 2 === 0;
+const roundsCount = 3;
+const getRandomNum = () => Math.floor(100 * Math.random());
+
+export const gameEven = () => {
+  console.log('Welcome to the Brain Games!');
+  console.log('Answer "yes" if number even otherwise answer "no"');
+  const playerName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${playerName}!`);
+
+  const iter = (currentRound) => {
+    if (currentRound === roundsCount) {
+      console.log(`Congratulations, ${playerName}!`);
+      return;
+    }
+    const question = getRandomNum();
+    const rightAnswer = isEven(getRandomNum()) ? 'yes' : 'no';
+    console.log(`Question: ${question}`);
+    const actualAnswer = readlineSync.question('Your answer: ');
+    if (actualAnswer === rightAnswer) {
+      console.log('Correct!');
+      iter(currentRound + 1);
+    } else {
+      console.log(`'${actualAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
+      console.log(`Let's try again, ${playerName}!`);
+    }
+  };
+  iter(0);
 };
