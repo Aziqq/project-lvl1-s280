@@ -14,4 +14,5 @@ $ npm i -g brain-games-by-aziq
 - `brain-calc` - What is the result of the expression of given numbers?
 - `brain-gcd` - Find the greatest common divisor of given numbers.
 - `brain-balance` - Balance the given number.
-- `brain-progression` - What number is missing in this progression?.
+- `brain-progression` - What number is missing in this progression?
+- `brain-prime` - Is this number prime?.
