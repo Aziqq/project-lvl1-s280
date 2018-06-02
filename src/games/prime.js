@@ -13,8 +13,9 @@ const isPrime = (num) => {
 };
 
 const task = () => {
-  const question = getRandomNum(1, 200);
-  const correctAnswer = isPrime(question) ? 'yes' : 'no';
+  const num = getRandomNum(2, 200);
+  const question = num;
+  const correctAnswer = isPrime(num) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
