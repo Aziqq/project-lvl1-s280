@@ -8,14 +8,9 @@
 $ make install
 ```
 
-### Run
+### Simple games:
 
-```sh
-$ make start
-```
-
-### Run even game
-
-```sh
-$ make even
-```
+- `brain-even` - Answer "yes" if given number even otherwise answer "no".
+- `brain-calc` - What is the result of the expression of given numbers?
+- `brain-gcd` - Find the greatest common divisor of given numbers.
+- `brain-balance` - Balance the given number.
