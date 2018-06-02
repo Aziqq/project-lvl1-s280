@@ -14,8 +14,8 @@ const isPrime = (num) => {
 
 const task = () => {
   const question = getRandomNum(1, 100);
-  const rightAnswer = isPrime(question) ? 'yes' : 'no';
-  return [question, rightAnswer];
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
+  return [question, correctAnswer];
 };
 
 export default () => playGame(gameDescription, task);
