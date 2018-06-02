@@ -1,35 +1,20 @@
 import playGame from '../';
-import getRandomNum from '../random-number';
+import getRandomNum from '../utils';
 
 const gameDescription = 'What is the result of the expression?';
-const roundsCount = 10;
 
 export default () => {
-  const getRandomOperators = () => {
-    if (getRandomNum(1, 3) === 1) {
-      return '+';
-    } else if (getRandomNum(1, 3) === 2) {
-      return '-';
-    }
-    return '*';
-  };
-  const getResult = (a, b, operator) => {
-    switch (operator) {
-      case '+':
-        return a + b;
-      case '-':
-        return a - b;
-      default:
-        return a * b;
-    }
-  };
   const task = () => {
-    const operator = getRandomOperators();
     const num1 = getRandomNum(1, 10);
     const num2 = getRandomNum(1, 10);
-    const question = `${num1} ${operator} ${num2}`;
-    const rightAnswer = String(getResult(num1, num2, operator));
-    return [question, rightAnswer];
+    switch (getRandomNum(1, 3)) {
+      case 1:
+        return [`${num1} + ${num2}`, `${num1 + num2}`];
+      case 2:
+        return [`${num1} - ${num2}`, `${num1 - num2}`];
+      default:
+        return [`${num1} * ${num2}`, `${num1 * num2}`];
+    }
   };
-  playGame(gameDescription, task, roundsCount);
+  playGame(gameDescription, task);
 };
