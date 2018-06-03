@@ -13,7 +13,7 @@ const isPrime = (num) => {
 };
 
 const task = () => {
-  const num = getRandomNum(1, 3);
+  const num = getRandomNum(1, 100);
   const question = num;
   const correctAnswer = isPrime(num) ? 'yes' : 'no';
   return [question, correctAnswer];
