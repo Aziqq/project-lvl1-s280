@@ -1,4 +1,4 @@
-import playGame from '../';
+import playGame from '..';
 import getRandomNum from '../utils';
 
 const gameDescription = 'What is the result of the expression?';
@@ -17,4 +17,3 @@ const task = () => {
 };
 
 export default () => playGame(gameDescription, task);
-

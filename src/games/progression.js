@@ -25,4 +25,3 @@ const task = () => {
 };
 
 export default () => playGame(gameDescription, task);
-

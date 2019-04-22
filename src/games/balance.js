@@ -1,4 +1,4 @@
-import playGame from '../';
+import playGame from '..';
 import getRandomNum from '../utils';
 
 const gameDescription = 'Balance the given number.';
