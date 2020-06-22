@@ -17,7 +17,7 @@
     "dist"
   ],
   "dependencies": {
-    "readline-sync": "^1.4.9"
+    "readline-sync": "^1.4.10"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
